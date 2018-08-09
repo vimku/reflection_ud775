@@ -1,7 +1,29 @@
 What happens when you initialize a repository? Why do you need to do it?
+初始化版本库时会发生什么情况？为什么你需要这样做？
+	git init
+	Initialized empty Git repository in C:/Users/Administrator/reflection/.git/
+	git status
+	On branch master
+
+	No commits yet
+
+	Untracked files:
+	(use "git add <file>..." to include in what will be committed)
+	
+			lesson-2-reflection-prompts.txt
+			lesson_1_reflection_prompts.txt
+
+	nothing added to commit but untracked files present (use "git add" to track)
+	为了今后对项目进行版本控制
+	
+
 
 How is the staging area different from the working directory and the repository?
-What value do you think it offers?
+What value do you think it offers?暂存区与工作目录和版本库有何不同？你认为它具有什么价值？
+
+	暂存区存放工作目录中准备要提交到版本库的文件.
+	在有多个文件要提交到版本库的时候放在先暂存区然后一起提交到版本库
+
 
 How can you use the staging area to make sure you have one commit per logical
 change?
