@@ -26,15 +26,31 @@ What value do you think it offers?暂存区与工作目录和版本库有何不�
 
 
 How can you use the staging area to make sure you have one commit per logical
-change?
+change?如何使用暂存区确保为每项逻辑更改进行一次提交？
+
+	提交前使用git diff --staged 比较暂存区版本与最近提交版本.
+	使用git diff 比较工作目录版本与暂存区版本
 
 What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+organized? How would branches help?在哪些情况下，分支可以帮助你有序地组织历史记录？分支将如何提供帮助？
+
+	在进行实验性修改或者其他语言版本时等等情况下可以使用分支.
+	分支将与master版本隔离开来
 
 How do the diagrams help you visualize the branch structure?
+图表如何帮助你直观显示分支结构？
 
+	git checkout -b new_branch_name
+	git log --graph --oneline master ...(other branches)
+	图表形象直观的显示了每个branch和branch上提交commit的每个有序节点,使我们对整个repository有清晰认识
+	
 What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+the diagram the way we do?将两个分支合并到一起有何结果？为什么我们在图表中表示它的方式是那样的？
+
+	两个分支的commit会合并到一起,commit按提交时间排序
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
-manually?
+manually?	Git 的自动合并与始终手动进行合并各有何优缺点？
+
+	自动合并的问题是:当合并的2个分支上对同一模块进行不同更改时,会产生冲突自动合并无法进行.需要人去判断解决.
+	其他情况下自动合并相较人工合并更加快速有效
