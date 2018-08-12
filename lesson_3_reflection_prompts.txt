@@ -1,3 +1,43 @@
-何时你会想使用远程版本库，而不是将所有工作保存在本地？
+When would you want to use a remote repository rather than keeping all your work
+local?何时你会想使用远程版本库，而不是将所有工作保存在本地？
 
   在几台电脑上工作时或者与其他人协同工作时
+  
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+为何你希望始终手动地拉取更改，而不是让 Git 自动与你的远程版本库保持同步？
+
+	当本地和远程的最新的commit都没有同步到对方时,此时在本地做pull需要人工判断哪些是要拉取并merge的
+	
+
+Describe the differences between forks, clones, and branches.  When would you
+use one instead of another?说明Fork、克隆和分支之间的不同。何时使用某种功能而不是另一种？
+
+	Fork是在github上复制他人github repository的副本
+	Clone是复制github上的repository到本地,或者本地复制到本地
+	branch是在repository中新增一个分支版本,在进行实验性新功能开发中使用
+
+	
+What is the benefit of having a copy of the last known state of the remote
+stored locally?拥有远程分支的上次已知状态的副本（存储在本地）有何好处？
+
+	
+
+How would you collaborate without using Git or GitHub?  What would be easier,
+and what would be harder?
+如何在不使用 Git 或 GitHub 的情况下开展协同？哪种做法更容易？哪种做法更困难？
+
+    邮件或者文本文件. 显然git更容易操作,更有效率
+	
+
+When would you want to make changes in a separate branch rather than directly in
+master?  What benefits does each approach have?
+何时你会想在独立的分支中而不是直接在 master 中进行更改？两种方法各有何好处？
+
+    可以直接更改你的Fork中的 master 分支，但是，在协同构建公共版本库时，
+	标准的做法是在Fork内的非 master 分支中进行更改。这样一来，
+	可以轻松让你的 master 分支与原始版本库的 master 保持同步，
+	并在准备好时将 master 中的更改合并到分支中。
+
+	
